@@ -9,18 +9,18 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'films',
+        path: 'characters',
         children: [
           {
             path: '',
-            loadChildren: () => import('../films/films.module').then( m => m.FilmsPageModule)
-          },
+            loadChildren: () => import('../characters/characters.module').then( m => m.CharactersPageModule)
+          }/**,
           {
             path: ':id',
             loadChildren: () => import('../film-details/film-details.module').then( m => m.FilmDetailsPageModule)
-          }
+          } */
         ]
-      },
+      }/**,
       {
         path: 'people',
         children: [
@@ -38,12 +38,12 @@ const routes: Routes = [
             loadChildren: () => import('../planets/planets.module').then( m => m.PlanetsPageModule)
           }
         ]
-      }
+      } */
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/films',
+    redirectTo: '/tabs/characters',
     pathMatch: 'full'
   }
 ];

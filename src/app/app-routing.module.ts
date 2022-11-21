@@ -6,15 +6,15 @@ const routes: Routes = [
   {
     path: 'characters',
     loadChildren: () => import('./pages/characters/characters.module').then( m => m.CharactersPageModule)
-  }/**,
+  },
   {
     path: 'films',
-    loadChildren: () => import('./pages/spaceships/spaceships.module').then( m => m.SpaceshipsPageModule)
+    loadChildren: () => import('./pages/films/films.module').then( m => m.FilmsPageModule)
   },
   {
-    path: 'specimen-details',
-    loadChildren: () => import('./pages/specimen-details/specimen-details.module').then( m => m.SpecimenDetailsPageModule)
-  },
+    path: 'film-details',
+    loadChildren: () => import('./pages/film-details/film-details.module').then( m => m.FilmDetailsPageModule)
+  }/**,
   {
     path: 'spaceship-details',
     loadChildren: () => import('./pages/spaceship-details/spaceship-details.module').then( m => m.SpaceshipDetailsPageModule)
