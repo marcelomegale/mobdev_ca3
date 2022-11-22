@@ -4,41 +4,29 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)},
   {
+    path: 'episodes',
+    loadChildren: () => import('./pages/episodes/episodes.module').then( m => m.EpisodesPageModule)
+  },
+  {
     path: 'characters',
     loadChildren: () => import('./pages/characters/characters.module').then( m => m.CharactersPageModule)
   },
   {
-    path: 'films',
-    loadChildren: () => import('./pages/films/films.module').then( m => m.FilmsPageModule)
+    path: 'quotes',
+    loadChildren: () => import('./pages/quotes/quotes.module').then( m => m.QuotesPageModule)
   },
-  {
-    path: 'film-details',
-    loadChildren: () => import('./pages/film-details/film-details.module').then( m => m.FilmDetailsPageModule)
-  },/  {
-    path: 'characters-details',
-    loadChildren: () => import('./pages/characters-details/characters-details.module').then( m => m.CharactersDetailsPageModule),
   {
     path: 'death-count',
     loadChildren: () => import('./pages/death-count/death-count.module').then( m => m.DeathCountPageModule)
   },
   {
-    path: 'episodes',
-    loadChildren: () => import('./pages/episodes/episodes.module').then( m => m.EpisodesPageModule)
+    path: 'characters-details',
+    loadChildren: () => import('./pages/characters-details/characters-details.module').then( m => m.CharactersDetailsPageModule)
   },
   {
     path: 'episodes-details',
     loadChildren: () => import('./pages/episodes-details/episodes-details.module').then( m => m.EpisodesDetailsPageModule)
-  },
-  {
-    path: 'quotes',
-    loadChildren: () => import('./pages/quotes/quotes.module').then( m => m.QuotesPageModule)
   }
-  }
-**,
-  {
-    path: 'spaceship-details',
-    loadChildren: () => import('./pages/spaceship-details/spaceship-details.module').then( m => m.SpaceshipDetailsPageModule)
-  } */
 ];
 
 @NgModule({

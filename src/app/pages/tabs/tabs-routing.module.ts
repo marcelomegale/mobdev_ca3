@@ -14,31 +14,44 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () => import('../characters/characters.module').then( m => m.CharactersPageModule)
-          }/**,
+          },
           {
             path: ':id',
-            loadChildren: () => import('../film-details/film-details.module').then( m => m.FilmDetailsPageModule)
-          } */
-        ]
-      }/**,
-      {
-        path: 'people',
-        children: [
-          {
-            path: '',
-            loadChildren: () => import('../people/people.module').then( m => m.PeoplePageModule)
+            loadChildren: () => import('../characters-details/characters-details.module').then( m => m.CharactersDetailsPageModule)
           }
         ]
       },
       {
-        path: 'planets',
+        path: 'death-count',
         children: [
           {
             path: '',
-            loadChildren: () => import('../planets/planets.module').then( m => m.PlanetsPageModule)
+            loadChildren: () => import('../death-count/death-count.module').then( m => m.DeathCountPageModule)
           }
         ]
-      } */
+      },
+      {
+        path: 'episodes',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../episodes/episodes.module').then( m => m.EpisodesPageModule)
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../episodes-details/episodes-details.module').then( m => m.EpisodesDetailsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'quotes',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../quotes/quotes.module').then( m => m.QuotesPageModule)
+          }
+        ]
+      }
     ]
   },
   {
