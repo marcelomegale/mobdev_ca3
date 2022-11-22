@@ -28,6 +28,10 @@ const routes: Routes = [
   {
     path: 'episodes-details',
     loadChildren: () => import('./pages/episodes-details/episodes-details.module').then( m => m.EpisodesDetailsPageModule)
+  },
+  {
+    path: 'quotes',
+    loadChildren: () => import('./pages/quotes/quotes.module').then( m => m.QuotesPageModule)
   }
   }
 **,
