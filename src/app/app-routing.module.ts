@@ -14,7 +14,15 @@ const routes: Routes = [
   {
     path: 'film-details',
     loadChildren: () => import('./pages/film-details/film-details.module').then( m => m.FilmDetailsPageModule)
-  }/**,
+  },/  {
+    path: 'characters-details',
+    loadChildren: () => import('./pages/characters-details/characters-details.module').then( m => m.CharactersDetailsPageModule),
+  {
+    path: 'death-count',
+    loadChildren: () => import('./pages/death-count/death-count.module').then( m => m.DeathCountPageModule)
+  }
+  }
+**,
   {
     path: 'spaceship-details',
     loadChildren: () => import('./pages/spaceship-details/spaceship-details.module').then( m => m.SpaceshipDetailsPageModule)
