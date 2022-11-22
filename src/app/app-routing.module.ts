@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: 'death-count',
     loadChildren: () => import('./pages/death-count/death-count.module').then( m => m.DeathCountPageModule)
+  },
+  {
+    path: 'episodes',
+    loadChildren: () => import('./pages/episodes/episodes.module').then( m => m.EpisodesPageModule)
   }
   }
 **,
