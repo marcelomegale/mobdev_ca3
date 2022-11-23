@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-episodes-details',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EpisodesDetailsPage implements OnInit {
 
-  constructor() { }
-
+  episodes: any;
+ 
+  constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
+ 
   ngOnInit() {
+    let epid = this.activatedRoute.snapshot.paramMap.get('id');
+    this.http.get(`https://www.breakingbadapi.com/api/episodes/${epid}`).subscribe(res => {
+      this.episodes = res[0]; 
+    });
   }
+  
 
 }
