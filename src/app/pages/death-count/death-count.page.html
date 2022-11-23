@@ -1,9 +1,31 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>death-count</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/characters">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="grad" >Death Count</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+     
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding centered" >
+    There was an astonishing 
+  <ion-list lines="none" >
+    <ion-item *ngFor="let deathcount of deathcount | async">
+    <ion-icon name="Skull" ></ion-icon>
+    <h2 class="item-content"> {{ deathcount.deathCount }} </h2>
+    <ion-icon name="Skull"></ion-icon>
+    </ion-item>
+    Deaths in the series!! 
 
+   
+  </ion-list>
 </ion-content>
