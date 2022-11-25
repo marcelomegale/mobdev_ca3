@@ -4,7 +4,7 @@
     <ion-buttons slot="start" defaultHref="/tabs/characters">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title class="grad" >{{ characters?.name }}</ion-title>
+    <ion-title>{{ characters?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
  
@@ -12,7 +12,7 @@
   <ion-grid>
     <ion-row>
       <ion-col col-12>
-        <ion-img src="https://m.gjcdn.net/community-header/950/77697-crop0_30_940_378-bq2bhck8-v4.jpg"></ion-img>
+        <ion-img src="https://leedsbookclub.files.wordpress.com/2013/08/4c20b-breakingbadbanner.jpg"></ion-img>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -28,24 +28,5 @@
       Status: {{ characters.status }}<br>
     </div>
   </ion-card>
-
-
-<!--
-  <ion-card *ngIf="characters" class="character-card">
-    <ion-card-content >
-      <ion-icon name="person" slot="start"></ion-icon>
-      Character: {{ characters.name }}
-     </ion-card-content>
-    <ion-card-content>
-    <ion-icon name="happy" slot="start"></ion-icon>
-     Also known as: {{ characters.nickname }}
-    </ion-card-content>
-
-    <ion-card-content>
-      <ion-icon name="videocam" slot="start"></ion-icon>
-      Played by: {{ characters.portrayed }}
-    </ion-card-content> 
-  </ion-card>
- -->
 
 </ion-content>
