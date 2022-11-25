@@ -5,28 +5,33 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title class="grad" >{{ characters?.name }}</ion-title>
-    <ion-buttons slot="end">
+    <!--<ion-buttons slot="end">
       <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
       <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
-      
-    </ion-buttons>
+    </ion-buttons>-->
   </ion-toolbar>
 </ion-header>
  
 <ion-content padding="">
- 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-img src="https://m.gjcdn.net/community-header/950/77697-crop0_30_940_378-bq2bhck8-v4.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
   <ion-card *ngIf="characters" class="character-card">
-    
     <ion-card-content >
       <ion-icon name="person" slot="start"></ion-icon>
       Character: {{ characters.name }}
      </ion-card-content>
     <ion-card-content>
-      <ion-icon name="happy" slot="start"></ion-icon>
+    <ion-icon name="happy" slot="start"></ion-icon>
      Also known as: {{ characters.nickname }}
     </ion-card-content>
 

@@ -4,19 +4,27 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title class="grad" >Episodes</ion-title>
-    <ion-buttons slot="end">
+    <!--<ion-buttons slot="end">
       <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
       <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
-     
-    </ion-buttons>
+    </ion-buttons>-->
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-img src="https://lovelytab.com/wp-content/uploads/2019/01/Breaking-Bad-Wallpapers-%E2%80%93-Breaking-Bad-Movie-1024x429.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <ion-list>
     <ion-item button detail lines="inset" *ngFor="let episodes of (episodes | async)" (click)="openDetails(episodes)">
       {{ episodes.title }}

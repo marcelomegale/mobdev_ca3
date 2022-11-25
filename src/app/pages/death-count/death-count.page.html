@@ -4,19 +4,40 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title class="grad" >Death Count</ion-title>
-    <ion-buttons slot="end">
+    <!--<ion-buttons slot="end">
       <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
       <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
-     
-    </ion-buttons>
+    </ion-buttons>-->
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding centered" >
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-img src="https://blog.redbubble.com/wp-content/uploads/2013/09/francavilla_breaking-bad-tribute-header.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid id="grid-death">
+    <ion-row>
+      <ion-col size="auto">
+        <ion-icon name="Skull" ></ion-icon>
+      </ion-col>
+      <ion-col col-8>
+        Total deaths in the series
+      </ion-col>
+      <ion-col size="auto" *ngFor="let deathcount of deathcount | async">
+        {{ deathcount.deathCount }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<!--
     There was an astonishing 
   <ion-list lines="none" >
     <ion-item *ngFor="let deathcount of deathcount | async">
@@ -24,8 +45,7 @@
     <h2 class="item-content"> {{ deathcount.deathCount }} </h2>
     <ion-icon name="Skull"></ion-icon>
     </ion-item>
-    Deaths in the series!! 
-
-   
+    Deaths in the series!!  
   </ion-list>
+-->
 </ion-content>

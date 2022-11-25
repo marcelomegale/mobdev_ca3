@@ -17,6 +17,15 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0d0513c7-f064-40a8-9394-d4f4b4e91943/d9ax36f-58c5219d-5031-4b85-b660-d35e802abcd3.jpg/v1/fill/w_1686,h_474,q_70,strp/breaking_bad___widescreen_wallpaper_by_blockstabfatality_d9ax36f-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzBkMDUxM2M3LWYwNjQtNDBhOC05Mzk0LWQ0ZjRiNGU5MTk0M1wvZDlheDM2Zi01OGM1MjE5ZC01MDMxLTRiODUtYjY2MC1kMzVlODAyYWJjZDMuanBnIiwid2lkdGgiOiI8PTM4NDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.BptqlfP4svAxBzOJbZRc1zfLKg54N_cqVEyeT_eSFbM"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <ion-list line >
     <ion-item  *ngFor="let quotes of quotes | async">
       {{ quotes.quote }} By: {{quotes.author}}
