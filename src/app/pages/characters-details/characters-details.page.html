@@ -16,7 +16,7 @@
   </ion-toolbar>
 </ion-header>
  
-<ion-content padding="">
+<ion-content class="card-background-page">
   <ion-grid>
     <ion-row>
       <ion-col col-12>
@@ -25,6 +25,20 @@
     </ion-row>
   </ion-grid>
   
+  <ion-card *ngIf="characters" class="character-card">
+    <img src="{{ characters?.img }}"/>
+    <div class="card-title">{{ characters.name }}</div>
+    <div class="card-subtitle">
+      Nickname: {{ characters.nickname }}<br>
+      Birthday: {{ characters.birthday }}<br>
+      Occupation: {{ characters.occupation }}<br>
+      Played by: {{ characters.portrayed }}<br>
+      Status: {{ characters.status }}<br>
+    </div>
+  </ion-card>
+
+
+<!--
   <ion-card *ngIf="characters" class="character-card">
     <ion-card-content >
       <ion-icon name="person" slot="start"></ion-icon>
@@ -38,9 +52,8 @@
     <ion-card-content>
       <ion-icon name="videocam" slot="start"></ion-icon>
       Played by: {{ characters.portrayed }}
-    </ion-card-content>
- 
-    
+    </ion-card-content> 
   </ion-card>
- 
+ -->
+
 </ion-content>
