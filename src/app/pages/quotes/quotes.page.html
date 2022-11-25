@@ -21,7 +21,7 @@
     <ion-item  *ngFor="let quotes of quotes | async">
       <ion-grid>
         <ion-row>
-          <ion-col col-12>{{ quotes.quote }}</ion-col>
+          <ion-col col-12 class="quote">" {{ quotes.quote }} "</ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-12 class="by">By: {{quotes.author}}</ion-col>
